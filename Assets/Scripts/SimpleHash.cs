@@ -67,6 +67,9 @@ public readonly struct SmallXXHash4 {
     public static implicit operator SmallXXHash4 (uint4 accumulator) =>
         new SmallXXHash4(accumulator);
 
+    public static SmallXXHash4 operator + (SmallXXHash4 h, int v) =>
+        h.accumulator + (uint4)v;
+
     public static implicit operator uint4 (SmallXXHash4 hash) {
         uint4 avalanche = hash.accumulator;
         avalanche ^= avalanche >> 15;

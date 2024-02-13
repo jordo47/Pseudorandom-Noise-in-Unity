@@ -41,6 +41,22 @@ public class NoiseVisualization : Visualization {
 			Job<Lattice3D<LatticeTiling, Turbulence<Value>>>.ScheduleParallel
 		},
 		{
+			Job<Simplex1D<Simplex>>.ScheduleParallel,
+			Job<Simplex1D<Simplex>>.ScheduleParallel,
+			Job<Simplex2D<Simplex>>.ScheduleParallel,
+			Job<Simplex2D<Simplex>>.ScheduleParallel,
+			Job<Simplex3D<Simplex>>.ScheduleParallel,
+			Job<Simplex3D<Simplex>>.ScheduleParallel
+		},
+		{
+			Job<Simplex1D<Turbulence<Simplex>>>.ScheduleParallel,
+			Job<Simplex1D<Turbulence<Simplex>>>.ScheduleParallel,
+			Job<Simplex2D<Turbulence<Simplex>>>.ScheduleParallel,
+			Job<Simplex2D<Turbulence<Simplex>>>.ScheduleParallel,
+			Job<Simplex3D<Turbulence<Simplex>>>.ScheduleParallel,
+			Job<Simplex3D<Turbulence<Simplex>>>.ScheduleParallel
+		},
+		{
 			Job<Simplex1D<Value>>.ScheduleParallel,
 			Job<Simplex1D<Value>>.ScheduleParallel,
 			Job<Simplex2D<Value>>.ScheduleParallel,
@@ -108,7 +124,7 @@ public class NoiseVisualization : Visualization {
 
 	public enum NoiseType { 
 		Perlin, PerlinTurbulence, Value, ValueTurbulence,
-		SimplexValue, SimplexValueTurbulence, 
+		Simplex, SimplexTurbulence, SimplexValue, SimplexValueTurbulence, 
 		VoronoiWorleyF1, VoronoiWorleyF2, VoronoiWorleyF2MinusF1,
 		VoronoiChebyshevF1, VoronoiChebyshevF2, VoronoiChebyshevF2MinusF1
 	}
